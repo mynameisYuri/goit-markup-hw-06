@@ -1041,13 +1041,18 @@ img {
 }
 
 .form_field_svg_box {
-    position: absolute;
-        /* top: 50%;
-        left: 10px; */
-        /* transform: translateY(-50%); */
-        /* width: 50px; */
 
-        display: inline-block;
+
+    text-align: center;
+    margin-left: -28%;
+    margin-top: -6%;
+    position: relative;
+    z-index: 1;
+    float: left;
+
+
+
+    
 }
 
 /* .form_field_svg {
