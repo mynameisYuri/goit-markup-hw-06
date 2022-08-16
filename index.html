@@ -356,6 +356,23 @@
                         </li>
                     </ul>
                 </section>
+                <section class="footer_section_3">
+                    <h3 class="footer_section_3_title">подпишись на рассылку</h3>
+                    <form>
+                    <ul class="footer_section_3_list">
+                        <li>
+                            <input type="email" class="footer_section_3_input" placeholder="E-mail">
+                        </li>
+                        <li>
+                            <button class="footer_section_3_button" type="submit">Подписаться
+                                <svg class="footer_section_3_button_svg" width="24px" height="24px">
+                                    <use href="./images/svg/symbol-defs.svg#icon-homework_6_1_icon_send"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                    </form>
+                </section>
             </div>
         </div>
     </footer>
@@ -366,8 +383,73 @@
                     <use href="./images/svg/symbol-defs.svg#icon-close_icon"></use>
                 </svg>
             </button>
+            <form class="form js-speaker-form">
+                <div class="form_title_box"><b class="form_title">Оставьте свои данные, мы вам перезвоним</b></div>
+                <ul>
+                    <li class="form_field">
+                        <label for="user-name" class="form_field_title">Имя</label>
+                        <label for="user-name">
+                            <input type="text" name="user-name" id="user-name" class="date">
+                            <div class="form_field_svg_box">
+                                <svg class="form_field_svg" widh="18px" height="18px">
+                                    <use href="./images/svg/symbol-defs.svg#icon-homework_6_2_name"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="form_field">
+                        <label for="tel" class="form_field_title">Телефон</label>
+                        <label class="label_block" for="tel">
+                            <input type="tel" name="tel" id="tel" class="date">
+                            <div class="form_field_svg_box">
+                                <svg class="form_field_svg" widh="18px" height="18px">
+                                    <use href="./images/svg/symbol-defs.svg#icon-homework_6_3_tel"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="form_field">
+                        <label for="mail" class="form_field_title">Почта</label>
+                        <label for="mail">
+                            <input type="email" name="mail" id="mail" class="date">
+                            <div class="form_field_svg_box">
+                                <svg class="form_field_svg" widh="18px" height="18px">
+                                    <use href="./images/svg/symbol-defs.svg#icon-homework_6_4_mail"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+                <div class="form_comment">
+                    <label for="comment" class="form_field_title">Коментарий</label>
+                    <textarea class="comment" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст" class="date"></textarea>
+                </div>
+                <div class="form_agreement">
+                    <label for="agreement">
+                        <input class="checkbox" type="checkbox" name="agreement_accepted" value="agreement" id="agreement">
+                        <span class="custom_checkbox"></span>
+                        Соглашаюсь с рассылкой и принимаю <a class="agreement_link" href="/">Условия договора</a>
+                    </label>
+                </div>
+                <div class="form_buttom_box">
+                    <button class="form_button" type="submit">Отправить</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script>
+        (() => {
+            document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+
+                e.currentTarget.reset();
+            });
+        })();
+    </script>
 </body>
 </html>
