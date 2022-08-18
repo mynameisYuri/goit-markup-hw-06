@@ -1001,39 +1001,6 @@ img {
     color: var(--header_color_2);
 }
 
-.form_field_title {
-    margin-bottom: 4px;
-}
-
-.form_field_box {
-    position: relative;
-}
-
-.form_field_box:hover {
-    fill: var(--header_color_logo_studio_mail);
-}
-
-.label_block {
-    display: block;
-}
-
-.date {
-    display: block;
-    width: 100%;
-    height: 40px;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-
-    padding-left: 42px;
-
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.date:hover {
-    border: 1px solid var(--header_color_logo_studio_mail);
-}
-
 .form_field {
     display: flex;
     flex-direction: column;
@@ -1043,20 +1010,52 @@ img {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
-        
+
     letter-spacing: 0.01em;
-        
+
     color: var(--header_color_3);
 }
+
+.form_field_title {
+    margin-bottom: 4px;
+}
+
+.date {
+    display: block;
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px; */
+    border: ;
+
+    padding-left: 42px;
+}
+
+.form_field_box {
+    position: relative;
+    fill: #212121;
+    /* border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px; */
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form_field_box:focus {
+    fill: var(--header_color_logo_studio_mail);
+    border: 1px solid var(--header_color_logo_studio_mail);
+}
+
+.form_field_box:hover {
+    fill: var(--header_color_logo_studio_mail);
+}
+
+
 
 .form_field_svg {
     position: absolute;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form_comment {
@@ -1070,13 +1069,6 @@ img {
 }
 
 .checkbox {
-    /* -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-    position: absolute; */
-
-
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1175,7 +1167,7 @@ img {
     color: var(--header_color_logo_studio_mail);
 }
 
-.form_buttom_box {
+.form_button_box {
     text-align: center;
 }
 
