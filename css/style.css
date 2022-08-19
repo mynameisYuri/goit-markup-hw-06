@@ -853,6 +853,10 @@ img {
     padding: 15px 16px;
 }
 
+.footer_section_3_input[type=email] {
+    color: var(--first_background_page_color);
+}
+
 .footer_section_3_input::placeholder {
     
     font-weight: 400;
@@ -1024,38 +1028,53 @@ img {
     display: block;
     width: 100%;
     height: 40px;
-    /* border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px; */
-    /* border: ; */
-    /* opacity: 0; */
-    border: 0;
-
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    border: transparent;
+    outline: transparent;
+    
     padding-left: 42px;
+
+    /* transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
+
+/* .date:hover {
+    border-color: var(--header_color_logo_studio_mail);
+} */
+
+.date:focus {
+    border-color: var(--header_color_logo_studio_mail);
+}
+
+
 
 .form_field_box {
     position: relative;
-    fill: #212121;
+    fill: var(--header_color_2);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    
+    outline: transparent;
+
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form_field_box:hover {
+    border-color: var(--header_color_logo_studio_mail);
     fill: var(--header_color_logo_studio_mail);
-    border: 1px solid var(--header_color_logo_studio_mail);
 }
 
 .form_field_box:focus {
+    border-color: var(--header_color_logo_studio_mail);
     fill: var(--header_color_logo_studio_mail);
 }
 
-.form_field_box:checked {
+.date:focus+.form_field_svg {
     fill: var(--header_color_logo_studio_mail);
+    border-color: var(--header_color_logo_studio_mail);
 }
+
 
 
 
@@ -1159,6 +1178,8 @@ img {
 .comment::placeholder:hover {
     color: var(--header_color_logo_studio_mail);
 }
+
+
 
 .form_agreement {
     margin-bottom: 30px;
